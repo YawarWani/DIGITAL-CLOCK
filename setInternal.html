@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><script src="https://kit.fontawesome.com/eafcf23180.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    #div
+    {
+        height: 900px;
+        width: 100%;
+        /* display: grid;
+        place-items: center; */
+        background-image: linear-gradient(#33ccff,#990099) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    p{
+        display: grid;
+        place-items: center;
+        width: 200px;
+        height: 100px;
+        color: rgb(16, 3, 3);
+        padding: 40px;
+        background-image: linear-gradient(#33ffb4,#c5ff33);
+        border: 3px solid rgb(98, 0, 255);
+        border-radius: 50%;
+        font-size: 30px;
+        font-family: cursive;
+    }
+    #Time
+    {
+        background-image: linear-gradient(#33ffb4,#c5ff33);
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+      font-family: sans-serif
+      ;   
+     }
+     
+</style>
+<body>
+
+    <div id="div">
+        <div id="Time">The Best thing about time is that is changes</div>
+        <div><p></p></div>
+    </div>
+<script>
+    const para=document.querySelector("p");
+    
+    setInterval(()=>
+    {
+        const date=new Date();
+    para.innerHTML=date.toLocaleTimeString()
+    // para.style.fontSize="15rem";
+    },1000)
+</script>
+</body>
+</html>
